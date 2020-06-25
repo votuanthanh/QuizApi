@@ -1,0 +1,108 @@
+{ 
+  "id": "5ef459c6491de734205a288f",
+  "title": "Logic Quiz",
+  "description": "Test your logic knowledge!",
+  "creatorId": "5ef47230210bbd3f78eae460",
+  "questions": [
+  {
+    "name": "What is the specific heat of water?",
+    "answers": ["4.18 J/g&deg;C", "5.18 J/g&deg;C", "40.56 J/g&deg;C", "20.56 J/g&deg;C", "-2.56 J/g&deg;C"],
+    "correctAnswer": 0
+  },
+  {
+    "name": "What is the molar mass of iron?",
+    "answers": ["0.56 grams", "5.6 grams", " 56 grams", "560 grams"],
+    "correctAnswer": 2
+  },
+  {
+    "name": "What does the symbol Au stand for?",
+    "answers": ["aluminum", "silver", "gold", "arsenic", "actinium"],
+    "correctAnswer": 2
+  },
+  {
+    "name": "How can we solve for change in internal energy?",
+    "answers": ["mC&#916;T", "P&#916;V", "q/T", "q + w"],
+    "correctAnswer": 3
+  },
+  {
+    "name": "What is one type of calorimetry?",
+    "answers": ["clock calorimetry", "coffee cup calorimetry", "styrofoam calorimetry"],
+    "correctAnswer": 1
+  },
+  {
+    "name": "What is the ideal gas law?",
+    "answers": ["Pn=VRT", "PV=nRT", "RT=nPV", "PTV=nR", "V=nRPT", "n=PVRT"],
+    "correctAnswer": 1
+  },
+  {
+    "name": "Is enthalpy a state function?",
+    "answers": ["Yes", "No"],
+    "correctAnswer": 0
+  },
+  {
+    "name": "What is one type of calorimetry?",
+    "answers": ["bomb calorimetry", "plastic calorimetry", "wood calorimetry", "air calorimetry"],
+    "correctAnswer": 0
+  },
+  {
+    "name": "What is the molar mass of hydrogen?",
+    "answers": ["0.01 grams", "0.1 grams", "1 gram", "10 grams", "100 grams", "1000 grams"],
+    "correctAnswer": 2
+  },
+  {
+    "name": "What is the first law of thermodynamics?",
+    "answers": ["Conservation of mass", "Conservation of volume", "Conservation of energy"],
+    "correctAnswer": 2
+  },
+  {
+    "name": "Is work a state function?",
+    "answers": ["Yes", "No"],
+    "correctAnswer": 1
+  },
+  {
+    "name": "What is the volume of a rectangular prism?",
+    "answers": ["length x width x height", "length x width", "length x height", "length x width x height x circumference"],
+    "correctAnswer": 0
+  },
+  {
+    "name": "What is the molar mass of tin?",
+    "answers": ["0.119 grams", "1.19 grams", "11.9 grams", "119 grams", "1190 grams"],
+    "correctAnswer": 3,
+  },
+  {
+    "name": "How do we solve for Gibbs' free energy?",
+    "answers": ["H - PV", "PV + TS", "q + PV", "TP + q", "q + TS", "H - TS"],
+    "correctAnswer": 5
+  },
+  {
+    "name": "Is free energy a state function?",
+    "answers": ["yes", "no"],
+    "correctAnswer": 0
+  },
+  {
+    "name": "What is the molar mass of one gram of titanium?",
+    "answers": ["4.8 grams", "48 grams", "480 grams", "4800 grams"],
+    "correctAnswer": 1
+  },
+  {
+    "name": "What does the symbol Sb stand for?",
+    "answers": ["Antimony", "Selenium", "Sabenium", "Beryllium", "Tantaium"],
+    "correctAnswer": 0
+  },
+  {
+    "name": "How do we solve for entropy?",
+    "answers": ["n/q", "V/P", "P/T", "q/T"],
+    "correctAnswer": 3
+  },
+  {
+    "name": "Is entropy a state function?",
+    "answers": ["Yes", "No"],
+    "correctAnswer": 0
+  },
+  {
+    "name": "How many protons does argon have?",
+    "answers": ["9", "18", "27", "36", "45", "54", "63"],
+    "correctAnswer": 1
+  }
+  ]
+}
