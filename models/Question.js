@@ -15,10 +15,10 @@ const questionSchema = mongoose.Schema({
   },
   answers: [mongoose.Schema.Types.String],
   correctAnswer: mongoose.Schema.Types.Number,
-  creatorId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-  },
+  // creatorId: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'User',
+  // },
 });
 
 const Question = mongoose.model('Question', questionSchema);

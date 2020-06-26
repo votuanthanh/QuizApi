@@ -1,7 +1,7 @@
 { 
-  "_id": 1,
-  "name": "Logic Quiz",
-  "description": "Test your logic knowledge!",
+  "_id": 2,
+  "name": "Coding Quiz",
+  "description": "Test your coding knowledge!",
   "questions": [
   {
     "question": "What is the specific heat of water?",

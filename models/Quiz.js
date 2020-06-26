@@ -2,15 +2,19 @@ const mongoose = require('mongoose');
 
 // eslint-disable-next-line new-cap
 const quizSchema = mongoose.Schema({
+  _id: {
+    type: mongoose.Schema.Types.Number,
+    required: true,
+  },
   name: {
     type: mongoose.Schema.Types.String,
     required: true,
   },
-  creatorId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true,
-  },
+  // creatorId: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'User',
+  //   required: true,
+  // },
   description: {
     type: mongoose.Schema.Types.String,
     required: true,

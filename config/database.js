@@ -23,7 +23,6 @@ module.exports = (settings) => {
       throw err;
     }
 
-    User.seedAdminUser();
     console.log('MongoDb is ready!');
   });
 
