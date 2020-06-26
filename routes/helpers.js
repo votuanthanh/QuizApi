@@ -50,4 +50,29 @@ module.exports = {
     }
     return {};
   },
+  getScores: (questionsId, answers, _callback) => {
+    const wrongAnswers = [];
+    const correctAnswers = [];
+
+    Question.find({
+      _id: { $in: questionsId },
+    }).then((result) => {
+      result.forEach(function(question, questionIndex) {
+        if (question.correctAnswer == answers[questionIndex]) {
+          correctAnswers.push(question);
+        } else {
+          wrongAnswers.push(question);
+        }
+      });
+
+      _callback({
+        totalQuestions: result.length,
+        totalCorrectAnswers: wrongAnswers.length,
+        totalWrongAnswers: correctAnswers.length,
+      });
+    }).catch((err) => {
+      console.log(err);
+    });
+    return {};
+  },
 };

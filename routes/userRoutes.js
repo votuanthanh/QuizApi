@@ -1,7 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const User = require('../models/User');
-const SolvedQuiz = require('../models/SolvedQuiz');
+const SolvedExam = require('../models/SolvedExam');
 
 const router = new express.Router();
 
@@ -138,7 +138,7 @@ router.get('/getUserById/:id', (req, res) => {
       roles: user.roles,
       registrationDate: user.dateRegistered,
     };
-    SolvedQuiz.find({ solvedBy: id }).then((quizzes) => {
+    SolvedExam.find({ solvedBy: id }).then((quizzes) => {
       userData.solvedQuizzes = quizzes;
       res.status(200).json({
         success: true,

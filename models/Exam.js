@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // eslint-disable-next-line new-cap
 const ExamSchema = mongoose.Schema({
-  _id: {
+  quizId: {
     type: mongoose.Schema.Types.Number,
     required: true,
   },
@@ -18,6 +18,6 @@ const ExamSchema = mongoose.Schema({
   dateCreated: { type: mongoose.Schema.Types.Date, default: Date.now },
 });
 
-const Exam = mongoose.model('Quiz', ExamSchema);
+const Exam = mongoose.model('Exam', ExamSchema);
 
 module.exports = Exam;

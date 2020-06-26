@@ -2,9 +2,13 @@ const express = require('express');
 const authCheck = require('../middleware/auth-check');
 const Quiz = require('../models/Quiz');
 const Question = require('../models/Question');
-const SolvedQuiz = require('../models/SolvedQuiz');
+const Exam = require('../models/Exam');
+const solvedExam = require('../models/SolvedExam');
 const User = require('../models/User');
 const helpers = require('./helpers');
+const shuffle = require('../utilities/shuffle');
+const SolvedExam = require('../models/SolvedExam');
+
 const router = new express.Router();
 
 /**
@@ -139,16 +143,54 @@ router.post('/addQuestion', authCheck, (req, res) => {
   });
 });
 
-router.get('/getAllQuizzes', (req, res) => {
-  console.log(req);
+router.post('/createExam', authCheck, (req, res) => {
+  const user = req.user;
   Quiz
       .find()
-      .then((quizzes) => {
-        // console.log(quizzes)
-        res.status(200).json({
-          success: true,
-          message: `Quizzes loaded!`,
-          data: quizzes,
+      .then(async (quizzes) => {
+        const result = {};
+
+        const resultPromise = quizzes.map((quiz) => {
+          return Question.find({
+            _id: { $in: quiz.questions },
+          }).then((result) => ({ _id: quiz._id, question: result }));
+        });
+
+        Promise.all(resultPromise).then((values) => {
+          const logicQuiz = values[0];
+          const codingQuiz = values[1];
+          const englishQuiz = values[2];
+
+          result[logicQuiz._id] = { questions: shuffle(logicQuiz.question) };
+          result[codingQuiz._id] = { questions: shuffle(codingQuiz.question) };
+          result[englishQuiz._id] = { questions: shuffle(englishQuiz.question) };
+
+          Exam.insertMany([
+            {
+              quizId: logicQuiz._id,
+              questions: logicQuiz.question.map((q) => q._id),
+              creatorId: user._id,
+            },
+            {
+              quizId: codingQuiz._id,
+              questions: codingQuiz.question.map((q) => q._id),
+              creatorId: user._id,
+            },
+            {
+              quizId: englishQuiz._id,
+              questions: englishQuiz.question.map((q) => q._id),
+              creatorId: user._id,
+            },
+          ]).then((examDocs) => {
+            examDocs.forEach(function(exam) {
+              result[exam.quizId].exam = exam;
+            });
+            res.status(200).json({
+              success: true,
+              message: `Quizzes loaded!`,
+              data: result,
+            });
+          });
         });
       }).catch((err) => {
         console.log(err);
@@ -215,18 +257,30 @@ router.get('/getQuizById/:id', (req, res) => {
   });
 });
 
-router.post('/addSolvedQuiz', (req, res) => {
+router.post('/addSolvedExam', authCheck, (req, res) => {
   const quizData = req.body;
-  const solvedQuiz = {
+  const user = req.user;
+
+  if (quizData.correctAnswers.length != quizData.questions.length) {
+    return res.status(500).json({
+      success: false,
+      message: 'Correct answers not match the question list',
+      errors: 'Exam solved error',
+    });
+  }
+
+  const solvedExam = {
     quizId: quizData.quizId,
-    solvedBy: quizData.userId,
+    examId: quizData.examId,
+    solvedBy: user._id,
     questions: quizData.questions,
-    answers: quizData.answers,
+    correctAnswers: quizData.correctAnswers,
     dateSolved: new Date(),
   };
+
   // TODO: validate!
-  helpers.getScore(quizData.questions, quizData.answers, function(scoreResult) {
-    SolvedQuiz.create(solvedQuiz).then((quiz) => {
+  helpers.getScores(quizData.questions, quizData.correctAnswers, function(scoreResult) {
+    SolvedExam.create({...solvedExam, ...scoreResult}).then((quiz) => {
       res.status(200).json({
         success: true,
         message: `Solved Quiz added!`,
@@ -242,7 +296,6 @@ router.post('/addSolvedQuiz', (req, res) => {
       });
     });
   });
-  // console.log(solvedQuiz)
 });
 
 router.get('/getQuestionById/:id', (req, res) => {
@@ -360,7 +413,7 @@ router.get('/getMostRecent', (req, res) => {
             return;
           }
 
-          SolvedQuiz.count({}, function(err, solvedQuizzesCount) {
+          SolvedExam.count({}, function(err, solvedQuizzesCount) {
             if (err) {
               console.log(err);
               return;

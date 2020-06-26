@@ -32,9 +32,9 @@ const userSchema = new mongoose.Schema({
   },
   role: mongoose.Schema.Types.String,
   active: { type: mongoose.Schema.Types.Boolean, default: false },
-  solvedQuizzes: [{
+  solvedExams: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'SolvedQuiz',
+    ref: 'SolvedExam',
   }],
   dateRegistered: {
     type: mongoose.Schema.Types.Date,
