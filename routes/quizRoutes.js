@@ -3,11 +3,11 @@ const authCheck = require('../middleware/auth-check');
 const Quiz = require('../models/Quiz');
 const Question = require('../models/Question');
 const Exam = require('../models/Exam');
-const solvedExam = require('../models/SolvedExam');
+const History = require('../models/History');
+const SolvedExam = require('../models/SolvedExam');
 const User = require('../models/User');
 const helpers = require('./helpers');
 const shuffle = require('../utilities/shuffle');
-const SolvedExam = require('../models/SolvedExam');
 
 const router = new express.Router();
 
@@ -182,13 +182,17 @@ router.post('/createExam', authCheck, (req, res) => {
               creatorId: user._id,
             },
           ]).then((examDocs) => {
+            const examId = [];
             examDocs.forEach(function(exam) {
               result[exam.quizId].exam = exam;
+              examId.push(exam._id);
             });
-            res.status(200).json({
-              success: true,
-              message: `Quizzes loaded!`,
-              data: result,
+            History.create({ creatorId: user._id, exams: examId }).then(() => {
+              res.status(200).json({
+                success: true,
+                message: `Quizzes loaded!`,
+                data: result,
+              });
             });
           });
         });
