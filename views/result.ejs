@@ -23,15 +23,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td data-column="Full Name">Vo Tuan Thanh</td>
-        <td data-column="Email">thanh.dtu94@gmail.com</td>
-        <td data-column="Role">AI</td>
-        <td data-column="Logic">5/10</td>
-        <td data-column="Coding">5/10</td>
-        <td data-column="English">20/20</td>
-        <td data-column="Total">27/30</td>
-      </tr>
+      <% results.forEach(function(result){ %>
+        <tr>
+          <td data-column="Full Name"><%- result.user.firstName + ' ' + result.user.lastName %></td>
+          <td data-column="Email"><%- result.user.email %></td>
+          <td data-column="Role"><%- result.user.role %></td>
+          <td data-column="Logic"><%- result.exam['1'] %></td>
+          <td data-column="Coding"><%- result.exam['2'] %></td>
+          <td data-column="English"><%- result.exam['3'] %></td>
+          <td data-column="Total"><%- result.lastResult %></td>
+        </tr>
+      <% }); %>
     </tbody>
   </table>
 </body>

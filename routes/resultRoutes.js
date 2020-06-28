@@ -22,14 +22,28 @@ router.get('/result', (req, res) => {
   // });
   History.find()
       .populate('creatorId')
+      .populate('exams')
       .exec(function(error, results) {
         // eslint-disable-next-line max-len
-        console.log(results);
-        solvedExam.find({ examId: { $in: results.exams }}).then(function(solvedExam) {
-          console.log(solvedExam);
+        const history = [];
+        results.forEach(function(result) {
+          const exam = {};
+          let totalCorrect = 0;
+          let totalQuestion = 0;
+          result.exams.forEach(function(ex) {
+            exam[ex.quizId] = ex.totalCorrectAnswers + '/' + ex.totalQuestions;
+            totalCorrect += ex.totalCorrectAnswers;
+            totalQuestion += ex.totalQuestions;
+          });
+          history.push({
+            exam,
+            user: result.creatorId,
+            lastResult: totalCorrect + '/' + totalQuestion,
+          });
         });
+        console.log(history);
+        res.render('result', { results: history });
       });
-  res.render('result');
 });
 
 module.exports = router;

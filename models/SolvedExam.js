@@ -22,10 +22,10 @@ const solvedExamSchema = mongoose.Schema({
     ref: 'Question',
     require: true,
   }],
-  correctAnswers: [mongoose.Schema.Types.Number],
   totalQuestions: { type: mongoose.Schema.Types.Number },
-  totalCorrectAnswers: mongoose.Schema.Types.Number,
-  totalWrongAnswers: mongoose.Schema.Types.Number,
+  correctAnswers: [mongoose.Schema.Types.Number],
+  totalCorrectAnswers: { type: mongoose.Schema.Types.Number, default: 0 },
+  totalWrongAnswers: { type: mongoose.Schema.Types.Number, default: 0 },
   dateSolved: { type: mongoose.Schema.Types.Date, default: Date.now },
 });
 

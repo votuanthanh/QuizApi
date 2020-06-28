@@ -283,22 +283,30 @@ router.post('/addSolvedExam', authCheck, (req, res) => {
   };
 
   // TODO: validate!
+  // eslint-disable-next-line max-len
   helpers.getScores(quizData.questions, quizData.correctAnswers, function(scoreResult) {
-    SolvedExam.create({...solvedExam, ...scoreResult}).then((quiz) => {
-      res.status(200).json({
-        success: true,
-        message: `Solved Quiz added!`,
-        quiz,
-        scoreResult,
-      });
-    }).catch((err) => {
-      console.log('Error: ' + err);
-      return res.status(500).json({
-        success: false,
-        message: 'Cannot write the solved quiz in database',
-        errors: 'Quiz solved error',
-      });
-    });
+    Exam.findByIdAndUpdate(
+        solvedExam.examId,
+        {
+          correctAnswers: solvedExam.correctAnswers,
+          dateSolved: solvedExam.dateSolved,
+          ...scoreResult,
+        },
+        function(error) {
+          if (error) {
+            return res.status(500).json({
+              success: false,
+              message: 'Cannot write the solved quiz in database',
+              errors: 'Quiz solved error',
+            });
+          }
+
+          res.status(200).json({
+            success: true,
+            message: `Solved Quiz added!`,
+          });
+        }
+    );
   });
 });
 
