@@ -33,7 +33,6 @@
     "question": "What is the ideal gas law?",
     "answers": ["Pn=VRT", "PV=nRT", "RT=nPV", "PTV=nR", "V=nRPT", "n=PVRT"],
     "correctAnswer": 1
-  },
-
+  }
   ]
 }
