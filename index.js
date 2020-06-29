@@ -20,5 +20,5 @@ app.use('/quiz', quizRoutes);
 app.use('/show', showRoutes);
 
 app.listen(settings.port, () => {
-  console.log(`Node.js server running on port ${settings.port}...`);
+  console.log(`Node.js server running on port ${settings.port}, env: ${env}`);
 });

@@ -6,6 +6,7 @@
    "scripts": {
       "start": "node index.js",
       "watch": "nodemon index.js",
+      "production": "pm2 restart ecosystem.yml --env production",
       "seed": "node seed_db.js",
       "lint": "eslint .",
       "test": "echo \"Error: no test specified\" && exit 1"
