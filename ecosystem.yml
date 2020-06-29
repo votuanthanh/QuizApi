@@ -6,4 +6,4 @@ apps:
       PORT: 8080
     env_production:
       NODE_ENV: production
-      PORT: 3100
+      PORT: 30500
