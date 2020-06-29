@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const express = require('express');
 const authCheck = require('../middleware/auth-check');
 const Quiz = require('../models/Quiz');
