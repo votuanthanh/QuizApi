@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>All Users</title>
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(function(user){ %>
+        <tr>
+          <td data-column="Full Name"><%- user.firstName + ' ' + user.lastName %></td>
+          <td data-column="Email"><%- user.email %></td>
+          <td data-column="Phone Number"><%- user.phoneNumber %></td>
+          <td data-column="Active">
+            <input
+              type="checkbox"
+              value=<%- user._id %>
+              onclick='setStatus(this);'
+              <%- user.active ? "checked" : "" %>>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <script>
+    function setStatus(checkBoxDom) {
+      const active = checkBoxDom.checked;
+      const userId = checkBoxDom.value;
+      const hostName = location.protocol+'//' + location.hostname+ (location.port ? ':'+location.port: '');
+      checkBoxDom.disabled = true;
+
+      fetch(hostName + '/auth/updateStatus/' + userId, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ active  }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        checkBoxDom.disabled = false;
+        if (!data.success) {
+          checkBoxDom.checked = !checkBoxDom.checked
+          window.alert('Update failed!')
+        }
+      })
+      .catch((error) => {
+        checkBoxDom.disabled = false;
+        checkBoxDom.checked = !checkBoxDom.checked
+        window.alert('Update failed!')
+      });
+    }
+  </script>
+</body>
+
+</html>

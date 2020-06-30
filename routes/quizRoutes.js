@@ -219,7 +219,7 @@ router.post('/createExam', authCheck, (req, res) => {
               result[exam.quizId].exam = exam;
               examId.push(exam._id);
             });
-            History.create({ creatorId: user._id, exams: examId }).then(() => {
+            History.create({ creatorId: user._id, exams: examId, role }).then(() => {
               res.status(200).json({
                 success: true,
                 message: `Quizzes loaded!`,

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const express = require('express');
 const passport = require('passport');
 const User = require('../models/User');
@@ -152,6 +153,25 @@ router.get('/getUserById/:id', (req, res) => {
       success: false,
       message: 'Cannot find quiz with id ' + id,
       errors: err,
+    });
+  });
+});
+
+router.post('/updateStatus/:id', (req, res) => {
+  const userId = req.params.id;
+  const params = req.body;
+
+  User.findByIdAndUpdate(userId, { active: params.active }, function(error, user) {
+    if (error) {
+      return res.status(500).json({
+        success: false,
+        message: 'Can not change status of user',
+        error,
+      });
+    }
+    res.status(200).json({
+      success: true,
+      message: `Update status user that was successful`,
     });
   });
 });

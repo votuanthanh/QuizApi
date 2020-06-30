@@ -11,6 +11,7 @@ const HistorySchema = mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: 'Exam',
   }],
+  role: mongoose.Schema.Types.String,
   dateCreated: { type: mongoose.Schema.Types.Date, default: Date.now },
 });
 
