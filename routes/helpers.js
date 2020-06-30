@@ -67,8 +67,8 @@ module.exports = {
 
       _callback({
         totalQuestions: result.length,
-        totalCorrectAnswers: wrongAnswers.length,
-        totalWrongAnswers: correctAnswers.length,
+        totalCorrectAnswers: correctAnswers.length,
+        totalWrongAnswers: wrongAnswers.length,
       });
     }).catch((err) => {
       console.log(err);

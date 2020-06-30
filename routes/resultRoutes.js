@@ -22,6 +22,7 @@ router.get('/result', (req, res) => {
           });
           history.push({
             exam,
+            role: result.role,
             user: result.creatorId,
             lastResult: totalCorrect + '/' + totalQuestion,
           });
