@@ -10,6 +10,12 @@ const User = require('../models/User');
 const helpers = require('./helpers');
 const shuffle = require('../utilities/shuffle');
 
+const AI_ROLE = 'AI';
+const DEVELOPER_ROLE = 'DEVELOPER';
+const LOGIC_QUIZ = 1;
+const CODING_QUIZ = 2;
+const ENGLISH_QUIZ = 3;
+
 const router = new express.Router();
 
 /**
@@ -146,43 +152,68 @@ router.post('/addQuestion', authCheck, (req, res) => {
 
 router.post('/createExam', authCheck, (req, res) => {
   const user = req.user;
-  Quiz
-      .find()
+  const { role } = req.body;
+
+  if (!role) {
+    return res.status(500).json({
+      success: false,
+      message: 'The role field was required!',
+      errors: 'Create exam error',
+    });
+  }
+
+  if (role != AI_ROLE && role != DEVELOPER_ROLE) {
+    return res.status(500).json({
+      success: false,
+      message: 'The role field was DEVELOPER | AI!',
+      errors: 'Create exam error',
+    });
+  }
+
+  Quiz.find(role == AI_ROLE ? { _id: { $in: [LOGIC_QUIZ, ENGLISH_QUIZ] } } : {})
       .then(async (quizzes) => {
         const result = {};
 
         const resultPromise = quizzes.map((quiz) => {
           return Question.find({
-            _id: { $in: quiz.questions },
+            '_id': { $in: quiz.questions },
           }).then((result) => ({ _id: quiz._id, question: result }));
         });
 
         Promise.all(resultPromise).then((values) => {
-          const logicQuiz = values[0];
-          const codingQuiz = values[1];
-          const englishQuiz = values[2];
+          const logicQuiz = values.find((quiz) => quiz._id == LOGIC_QUIZ);
+          const codingQuiz = values.find((quiz) => quiz._id == CODING_QUIZ);
+          const englishQuiz = values.find((quiz) => quiz._id == ENGLISH_QUIZ);
+          const examArray = [];
 
-          result[logicQuiz._id] = { questions: shuffle(logicQuiz.question) };
-          result[codingQuiz._id] = { questions: shuffle(codingQuiz.question) };
-          result[englishQuiz._id] = { questions: shuffle(englishQuiz.question) };
-
-          Exam.insertMany([
-            {
+          if (logicQuiz) {
+            result[logicQuiz._id] = { questions: shuffle(logicQuiz.question) };
+            examArray.push({
               quizId: logicQuiz._id,
               questions: logicQuiz.question.map((q) => q._id),
               creatorId: user._id,
-            },
-            {
+            });
+          }
+
+          if (codingQuiz) {
+            result[codingQuiz._id] = { questions: shuffle(codingQuiz.question) };
+            examArray.push({
               quizId: codingQuiz._id,
               questions: codingQuiz.question.map((q) => q._id),
               creatorId: user._id,
-            },
-            {
+            });
+          }
+
+          if (englishQuiz) {
+            result[englishQuiz._id] = { questions: shuffle(englishQuiz.question) };
+            examArray.push({
               quizId: englishQuiz._id,
               questions: englishQuiz.question.map((q) => q._id),
               creatorId: user._id,
-            },
-          ]).then((examDocs) => {
+            });
+          }
+
+          Exam.insertMany(examArray).then((examDocs) => {
             const examId = [];
             examDocs.forEach(function(exam) {
               result[exam.quizId].exam = exam;
@@ -197,7 +228,8 @@ router.post('/createExam', authCheck, (req, res) => {
             });
           });
         });
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.log(err);
         res.status(400).json({
           success: false,

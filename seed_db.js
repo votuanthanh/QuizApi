@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const fs = require('fs');
 const User = require('./models/User');
 const Quiz = require('./models/Quiz');

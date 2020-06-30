@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const jwt = require('jsonwebtoken');
 const User = require('mongoose').model('User');
 const PassportLocalStrategy = require('passport-local').Strategy;
@@ -13,6 +14,11 @@ module.exports = new PassportLocalStrategy({
       return done('Incorect email or password');
     }
 
+    console.log(user.active);
+    if (!user.active) {
+      return done('Your account is inactive. Contact your administrator to activate it');
+    };
+
     const payload = {
       sub: user._id,
     };
@@ -20,12 +26,8 @@ module.exports = new PassportLocalStrategy({
     const token = jwt.sign(payload, 'c9ffcf6087a');
     const data = {
       email: user.email,
-      role: user.role,
       id: user._id,
     };
-
-    console.log('User data:');
-    console.log(data);
 
     return done(null, token, data);
   }).catch((err) => {
