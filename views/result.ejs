@@ -25,7 +25,7 @@
     <tbody>
       <% results.forEach(function(result){ %>
         <tr>
-          <td data-column="Full Name"><%- result.user.firstName + ' ' + result.user.lastName %></td>
+          <td data-column="Full Name"><%- result.user.fullName %></td>
           <td data-column="Email"><%- result.user.email %></td>
           <td data-column="Role"><%- result.role %></td>
           <td data-column="Logic"><%- result.exam['1'] %></td>

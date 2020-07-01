@@ -16,13 +16,13 @@ const userSchema = new mongoose.Schema({
     required: getRequiredPropMsg('Password'),
     default: '570d1e1e6e3211901dc80fb4e6eab23671c5b475ba4f5866ebc1335de23b6921',
   },
-  phoneNumber: {
-    type: mongoose.Schema.Types.String,
-  },
   salt: {
     type: mongoose.Schema.Types.String,
     required: true,
     default: '71YA8jj5ikAV/BO3qvjk31yfoTvHR2K5t0GhmXne0e2QZkRv7khVldTcvaeQrWPRmOEcnCTSy65kM6ROOQd273GEgycc15ydYZczJ3Cbi3EBpkR2KsGUT4ntd7O/x9Hw4deDtMa4dm2LkITgXX9cbDnckbcbFljbxK2uSd3JblU=',
+  },
+  phoneNumber: {
+    type: mongoose.Schema.Types.String,
   },
   firstName: {
     type: mongoose.Schema.Types.String,

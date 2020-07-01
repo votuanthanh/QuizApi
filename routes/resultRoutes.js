@@ -8,6 +8,7 @@ router.get('/result', (req, res) => {
   History.find()
       .populate('creatorId')
       .populate('exams')
+      .sort({schedule: 1})
       .exec(function(error, results) {
       // eslint-disable-next-line max-len
         const history = [];

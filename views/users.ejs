@@ -16,15 +16,17 @@
         <th>Full Name</th>
         <th>Email</th>
         <th>Phone</th>
+        <th>Date</th>
         <th>Status</th>
       </tr>
     </thead>
     <tbody>
       <% users.forEach(function(user){ %>
         <tr>
-          <td data-column="Full Name"><%- user.firstName + ' ' + user.lastName %></td>
+          <td data-column="Full Name"><%- user.fullName %></td>
           <td data-column="Email"><%- user.email %></td>
           <td data-column="Phone Number"><%- user.phoneNumber %></td>
+          <td data-column="Phone Number"><%- user.schedule.toLocaleString() %></td>
           <td data-column="Active">
             <input
               type="checkbox"
