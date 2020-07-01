@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable max-len */
 const fs = require('fs');
 const User = require('./models/User');
@@ -7,7 +8,8 @@ const env = process.env.NODE_ENV || 'development';
 const settings = require('./config/settings')[env];
 require('./config/database')(settings);
 
-const USERS_PATH = './data/users.json';
+const LIST_USER_PATH_1 = './data/07_03_2020_users.json';
+const LIST_USER_PATH_2 = './data/07_06_2020_users.jsonn';
 const LOGIC_QUIZ_PATH = './data/logicQuiz.json';
 const CODING_QUIZ_PATH = './data/codingQuiz.json';
 const ENGLISH_QUIZ_PATH = './data/englishQuiz.json';
@@ -31,6 +33,29 @@ async function seedQuiz(quizPath) {
   });
 }
 
+async function seedUser(userPath, date) {
+  // October 13, 2014
+  const users = fs.readFileSync(userPath, 'utf8');
+  const jsonUsers = JSON.parse(users);
+
+  const listUser = [];
+  for (const user of jsonUsers) {
+    listUser.push({
+      'fullName': user.fullName,
+      'email': user.email,
+      'schedule': new Date(`${date} ${user.schedule}:00`),
+    });
+  }
+
+  User.insertMany(listUser, function(error) {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log('SEED USER WAS SUCCESSFUL: ', date);
+    }
+  });
+}
+
 (async () => {
   try {
     await User.deleteMany({});
@@ -42,6 +67,8 @@ async function seedQuiz(quizPath) {
 
     User.seedAdminUser();
     User.insertMany(jsonUsers);
+
+    seedUser(LIST_USER_PATH_1, 'July 03, 2020');
 
     seedQuiz(LOGIC_QUIZ_PATH);
     seedQuiz(CODING_QUIZ_PATH);
