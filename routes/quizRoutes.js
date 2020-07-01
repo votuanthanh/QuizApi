@@ -496,4 +496,39 @@ router.get('/getMostRecent', (req, res) => {
       });
 });
 
+router.post('/completeAllExams', authCheck, (req, res) => {
+  const data = req.body;
+  const user = req.user;
+
+  if (!data.duration || data.exams.length < 1) {
+    return res.status(422).json({
+      success: false,
+      message: 'The exams | duration field was required!',
+      errors: 'Create exam error',
+    });
+  }
+
+  console.log(user._id, data.exams);
+  History.findOneAndUpdate(
+      { $and: [{ exams: { $all: data.exams } }, { creatorId: user._id }] },
+      { duration: data.duration }
+  )
+      .then(function(result) {
+        User.findByIdAndUpdate(user._id, { active: false }).then(() => {
+          res.status(200).json({
+            success: true,
+            message: 'Complete all quizzies!',
+          });
+        });
+      })
+      .catch(function(error) {
+        console.error(error);
+        return res.status(500).json({
+          success: false,
+          message: 'Cannot complete the quizzies',
+          errors: 'Quiz error',
+        });
+      });
+});
+
 module.exports = router;

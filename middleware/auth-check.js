@@ -24,6 +24,9 @@ module.exports = (req, res, next) => {
       if (!user) {
         return res.status(401).end();
       }
+      if (!user.active) {
+        return res.status(401).end();
+      }
       req.user = user;
       return next();
     });
