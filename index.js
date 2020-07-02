@@ -15,6 +15,10 @@ require('./config/passport')();
 
 // Import server-routes
 // require('./config/routes')(app)
+app.get('/', function(req, res) {
+  res.render('index');
+});
+
 app.use('/auth', userRoutes);
 app.use('/quiz', quizRoutes);
 app.use('/show', showRoutes);

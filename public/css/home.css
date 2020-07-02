@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Open+Sans');
+
+body {
+	background-color: #B10DC9;
+  font-family: 'Open Sans', sans-serif;
+}
+#main {
+  margin-top: 250px;
+}
+
+.container {
+  width: 750px;
+}
+.title {
+	display: block;
+	text-align: center;
+}
+
+.title h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 55px;
+  color: #DDDDDD;
+}
+
+.title h3 {
+  color: #DDDDDD;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn > i {
+  font-size: 40px;
+}
+
+.btn {
+	background-color: #ffffff;
+  border: 3px solid #DDDDDD;
+	width: 150px;
+	height: 150px;
+	display: block;
+	margin: 5px;
+	text-align: center;
+  font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+}
+
+.btn:hover {
+  background-color: #DDDDDD;
+}
+
+/*----Quiz Questions----*/
+#quiz_area {
+	visibility: hidden;
+	width: 650px;
+	height: 450px;
+	position: absolute;
+	margin: auto;
+	top: 15%;
+	left: 20%;
+}
+
+.q-wrapper {
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  border: 3px solid #B10DC9;
+  width: 350px;
+  position: relative;
+  left: 30%;
+  text-align: center;
+}
+
+input {
+	cursor: pointer;
+}
+
+.question {
+  display: inline-block;
+}
+
+#num {
+	padding: 5px;
+	font-size: 45px;
+  font-family: 'Lobster', cursive;
+}
+
+#question {
+	margin: 10px;
+	text-align: center;
+	font-size: 20px;
+}
+
+#choices {
+  margin: 5px;
+	padding-left: 185px;
+	font-size: 18px;
+}
+
+.answer {
+  height: 50px;
+  width: 350px;
+  border-radius: 3px;
+  border: 3px solid #B10DC9;
+}
+
+.answer:active, .answer.active {
+  background-color: #DDDDDD;
+}
+
+.control {
+  height: 45px;
+  width: 100px;
+  position: relative;
+  top: 40%;
+  left: 40%;
+	background-color: #DDDDDD;
+	margin: 5px;
+	border: none;
+  display: inline-block;
+}
+
+#results {
+  font-family: 'Open Sans', sans-serif;
+	visibility: hidden;
+	text-align: center;
+	background-color: #FFFFFF;
+	border-radius: 3px;
+	width: 550px;
+	height: 250px;
+	position: absolute;
+	top: 25%;
+	left: 30%;
+}
+
+#message {
+  position: relative;
+  top: 10%;
+	text-align: center;
+	vertical-align: middle;
+  font-family: 'Lobster', cursive;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#reset {
+  border-radius: 3px;
+  background-color: #B10DC9;
+  position: relative;
+  top: 15%;
+  left: 35%;
+}
+
+.center-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
