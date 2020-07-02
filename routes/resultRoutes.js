@@ -1,6 +1,7 @@
 const express = require('express');
 const History = require('../models/History');
 const User = require('../models/User');
+const formatMinutes = require('../utilities/formatMinutes')
 
 const router = new express.Router();
 
@@ -14,6 +15,7 @@ router.get('/result', (req, res) => {
         const history = [];
         results.forEach(function(result) {
           const exam = {};
+          const duration = result.duration && result.duration >= 0 ? result.duration : 0;
           let totalCorrect = 0;
           let totalQuestion = 0;
           result.exams.forEach(function(ex) {
@@ -21,14 +23,21 @@ router.get('/result', (req, res) => {
             totalCorrect += ex.totalCorrectAnswers;
             totalQuestion += ex.totalQuestions;
           });
-          history.push({
-            exam,
-            role: result.role,
-            user: result.creatorId,
-            lastResult: totalCorrect + '/' + totalQuestion,
-          });
+          if (totalCorrect != 0 && totalQuestion != 0) {
+            history.push({
+              exam,
+              role: result.role,
+              duration: formatMinutes(duration),
+              date: result.dateCreated,
+              user: result.creatorId,
+              totalCorrect,
+              lastResult: totalCorrect + '/' + totalQuestion,
+            });
+          }
         });
-        console.log(history);
+        history.sort(function(a, b) {
+          return b.totalCorrect - a.totalCorrect;
+        });
         res.render('result', { results: history });
       });
 });
