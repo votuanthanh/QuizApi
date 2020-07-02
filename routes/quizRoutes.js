@@ -187,28 +187,31 @@ router.post('/createExam', authCheck, (req, res) => {
           const examArray = [];
 
           if (logicQuiz) {
-            result[logicQuiz._id] = { questions: shuffle(logicQuiz.question) };
+            const logicQuestions = shuffle(logicQuiz.question).slice(0, role == AI_ROLE ? 20 : 10);
+            result[logicQuiz._id] = { questions: logicQuestions };
             examArray.push({
               quizId: logicQuiz._id,
-              questions: logicQuiz.question.map((q) => q._id),
+              questions: logicQuestions.map((q) => q._id),
               creatorId: user._id,
             });
           }
 
           if (codingQuiz) {
-            result[codingQuiz._id] = { questions: shuffle(codingQuiz.question) };
+            const codingQuestions = shuffle(codingQuiz.question).slice(0, 10);
+            result[codingQuiz._id] = { questions: codingQuestions };
             examArray.push({
               quizId: codingQuiz._id,
-              questions: codingQuiz.question.map((q) => q._id),
+              questions: codingQuestions.map((q) => q._id),
               creatorId: user._id,
             });
           }
 
           if (englishQuiz) {
-            result[englishQuiz._id] = { questions: shuffle(englishQuiz.question) };
+            const englishQuestions = shuffle(englishQuiz.question).slice(0, 10);
+            result[englishQuiz._id] = { questions: englishQuestions };
             examArray.push({
               quizId: englishQuiz._id,
-              questions: englishQuiz.question.map((q) => q._id),
+              questions: englishQuestions.map((q) => q._id),
               creatorId: user._id,
             });
           }

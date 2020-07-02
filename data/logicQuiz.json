@@ -1,108 +1,257 @@
-{ 
+{
   "_id": 1,
   "name": "Logic Quiz",
   "description": "Test your logic knowledge!",
   "questions": [
-  {
-    "question": "What is the specific heat of water?",
-    "image": "",
-    "answers": ["4.18 J/g&deg;C", "5.18 J/g&deg;C", "40.56 J/g&deg;C", "20.56 J/g&deg;C", "-2.56 J/g&deg;C"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What is the molar mass of iron?",
-    "answers": ["0.56 grams", "5.6 grams", " 56 grams", "560 grams"],
-    "correctAnswer": 2
-  },
-  {
-    "question": "What does the symbol Au stand for?",
-    "answers": ["aluminum", "silver", "gold", "arsenic", "actinium"],
-    "correctAnswer": 2
-  },
-  {
-    "question": "How can we solve for change in internal energy?",
-    "answers": ["mC&#916;T", "P&#916;V", "q/T", "q + w"],
-    "correctAnswer": 3
-  },
-  {
-    "question": "What is one type of calorimetry?",
-    "answers": ["clock calorimetry", "coffee cup calorimetry", "styrofoam calorimetry"],
-    "correctAnswer": 1
-  },
-  {
-    "question": "What is the ideal gas law?",
-    "answers": ["Pn=VRT", "PV=nRT", "RT=nPV", "PTV=nR", "V=nRPT", "n=PVRT"],
-    "correctAnswer": 1
-  },
-  {
-    "question": "Is enthalpy a state function?",
-    "answers": ["Yes", "No"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What is one type of calorimetry?",
-    "answers": ["bomb calorimetry", "plastic calorimetry", "wood calorimetry", "air calorimetry"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What is the molar mass of hydrogen?",
-    "answers": ["0.01 grams", "0.1 grams", "1 gram", "10 grams", "100 grams", "1000 grams"],
-    "correctAnswer": 2
-  },
-  {
-    "question": "What is the first law of thermodynamics?",
-    "answers": ["Conservation of mass", "Conservation of volume", "Conservation of energy"],
-    "correctAnswer": 2
-  },
-  {
-    "question": "Is work a state function?",
-    "answers": ["Yes", "No"],
-    "correctAnswer": 1
-  },
-  {
-    "question": "What is the volume of a rectangular prism?",
-    "answers": ["length x width x height", "length x width", "length x height", "length x width x height x circumference"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What is the molar mass of tin?",
-    "answers": ["0.119 grams", "1.19 grams", "11.9 grams", "119 grams", "1190 grams"],
-    "correctAnswer": 3
-  },
-  {
-    "question": "How do we solve for Gibbs' free energy?",
-    "answers": ["H - PV", "PV + TS", "q + PV", "TP + q", "q + TS", "H - TS"],
-    "correctAnswer": 5
-  },
-  {
-    "question": "Is free energy a state function?",
-    "answers": ["yes", "no"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What is the molar mass of one gram of titanium?",
-    "answers": ["4.8 grams", "48 grams", "480 grams", "4800 grams"],
-    "correctAnswer": 1
-  },
-  {
-    "question": "What does the symbol Sb stand for?",
-    "answers": ["Antimony", "Selenium", "Sabenium", "Beryllium", "Tantaium"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "How do we solve for entropy?",
-    "answers": ["n/q", "V/P", "P/T", "q/T"],
-    "correctAnswer": 3
-  },
-  {
-    "question": "Is entropy a state function?",
-    "answers": ["Yes", "No"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "How many protons does argon have?",
-    "answers": ["9", "18", "27", "36", "45", "54", "63"],
-    "correctAnswer": 1
-  }
+    {
+      "question": "Hình lục giác nào trong số các hình A, B, C, D và E có thể thêm vào một dấu chấm sao cho cả hai dấu chấm đáp ứng được cùng điều kiện như hai dấu chấm trong hình lục giác bên trái ?",
+      "image": "https://i.imgur.com/4W9OD4P.jpg",
+      "answers": ["A", "B", "C", "D", "E"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Chữ cái nào trực diện với chữ cái mà cách nó 2 chữ cái theo chiều kim đồng hồ tính từ chữ cái trực diện với chữ cái E",
+      "image": "https://i.imgur.com/EFDJuvh.jpg",
+      "answers": ["A", "B", "C", "D", "E", "F", "G", "H"],
+      "correctAnswer": 6
+    },
+    {
+      "question": "Số nào sẽ thay vào dấu chấm hỏi trong hình bên dưới?",
+      "image": "https://i.imgur.com/qqtuOOz.jpg",
+      "answers": ["0", "2", "3", "5"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Nhóm hình trên còn thiếu hình nào trong số các hình sau?",
+      "image": "https://i.imgur.com/ruWbEmk.jpg",
+      "answers": ["A", "B", "C", "D"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Tiếp theo chuỗi hình trên là hình nào trong số các hình sau?",
+      "image": "https://i.imgur.com/faZPgH7.png",
+      "answers": ["A", "B", "C", "D", "E"],
+      "correctAnswer": 4
+    },
+    {
+      "question": "Điền vào chỗ dấu hỏi hình thích hợp?",
+      "image": "https://i.imgur.com/pPvnQVo.jpg",
+      "answers": ["A", "B", "C", "D"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Hãy điền số còn thiếu vào chỗ dấu chấm hỏi?",
+      "image": "https://i.imgur.com/MZvwzqi.jpg",
+      "answers": ["4", "5", "6", "7"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Chọn đáp án đúng?",
+      "image": "https://i.imgur.com/rx0yu02.jpg",
+      "answers": ["A", "B", "C", "D", "E"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Cho chuỗi số: 0, 4, 2, 6, 3, 7, 3.5, ?",
+      "image": "",
+      "answers": ["5", "6.5", "7.5", "8", "9"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Tìm ra hai từ (một từ trong mỗi nhóm ngoặc đơn bên dưới có quan hệ tương tự với các từ in hoa và liên quan tới các từ trong nhóm :KINH ĐỘ (độ, trí tuyến, kinh tuyến);VĨ ĐỘ (đường song song, đường thẳng, đường phân)",
+      "image": "",
+      "answers": [
+        "Kinh tuyến, Đường song song",
+        "Vĩ Tuyến, Đường song song",
+        "Kinh độ"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Cho hình dưới. Khi hình trên gập lại để tạo thành một hình hộp thì có thể là duy nhất hình nào trong các hình dưới đây?",
+      "image": "https://i.imgur.com/O2fxZk8.jpg",
+      "answers": ["A", "B", "C", "D", "E"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Từ nào khác với các từ còn lại?",
+      "image": "",
+      "answers": [
+        "Xương đùi",
+        "Hàm dưới",
+        "Xương mác",
+        "Xương chày",
+        "Xương bánh chè"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Chiều nay đồng hồ đeo tay của tôi chạy đúng giờ, sau đó nó bắt đầu chạy chậm 17 phút mỗi giờ cho đến khi cách đây 6 tiếng nó ngừng chạy hoàn toàn. Lúc này nó chỉ thời gian là 2.52 pm. Vậy bây giờ là mấy giờ?",
+      "image": "",
+      "answers": ["10 giờ đêm", "11 giờ sáng", "5 giờ chiều", "12 giờ đêm"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Cho hình bên trái. Hãy điền hình còn thiếu vào hình bên?",
+      "image": "https://i.imgur.com/IRejLlf.jpg",
+      "answers": ["A", "B", "C", "D", "E"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Tiếp theo chuỗi hình trên là hình nào trong số các hình sau?",
+      "image": "https://i.imgur.com/nnGU370.jpg",
+      "answers": ["A", "B", "C", "D", "E", "F", "G", "H"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Cho chuỗi số sau: 15, 5, 8, 24, 21, 7, 10, 30, ?, ?, ?, 36, 33. Hãy điền số thích hợp vào chỗ dấu chấm hỏi?",
+      "image": "",
+      "answers": ["27,9,12", "1,2,5", "27,9,11", "13,15,40"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Cho hình bên trái. Hình nào bên dưới có điểm chung nhất với hình ở bên trái?",
+      "image": "https://i.imgur.com/EiizBHY.jpg",
+      "answers": ["A", "B", "C", "D"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Hãy điền con số còn thiếu vào ô trống ở hình dưới?",
+      "image": "https://i.imgur.com/wJnZeFT.jpg",
+      "answers": ["4", "5", "6", "7"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Từ nào trong ngoặc đơn gần nghĩa nhất với từ in hoa sau đây? 'HỢP NHẤT'",
+      "image": "",
+      "answers": ["Bịt mõm", "Nổ", "Kết hợp", "Bất động", "Xiết chặt"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Số nào sẽ thay cho dấu chấm hỏi?",
+      "image": "",
+      "answers": ["11", "17", "22", "55"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Chọn hình phù hợp ở bên phải để điền vào chỗ còn thiếu trong hình bên trái:",
+      "image": "https://i.imgur.com/CqnQzUM.jpg",
+      "answers": ["A", "B", "C", "D", "E", "F"],
+      "correctAnswer": 5
+    },
+    {
+      "question": "Số nào sẽ là số tiếp theo của chuỗi số sau: 4, 6, 9, 6, 14, 6, ?",
+      "image": "",
+      "answers": ["12", "19", "1", "5"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Có bao nhiêu hình vuông trong hình bên dưới? ",
+      "image": "https://i.imgur.com/1Dwvcfh.jpg",
+      "answers": ["12", "10", "78", "0"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Chọn hình phù hợp ở bên dưới để điền vào chỗ còn thiếu trong hình bên trên:",
+      "image": "https://i.imgur.com/UPnJOZ3.jpg",
+      "answers": ["A", "B", "C", "D", "E", "F", "G", "H"],
+      "correctAnswer": 6
+    },
+    {
+      "question": "Hình nào khác với các hình còn lại?",
+      "image": "https://i.imgur.com/BiylMnH.jpg",
+      "answers": ["A", "B", "C", "D"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Hãy điền vào số còn thiếu trong hình bên dưới",
+      "image": "https://i.imgur.com/mJXDWNh.jpg",
+      "answers": ["8", "16", "9", "0"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Hình nào khác với các hình còn lại?",
+      "image": "https://i.imgur.com/cjkmpsz.jpg",
+      "answers": ["A", "B", "C", "D"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Điền số còn thiếu trong hình sau:",
+      "image": "https://i.imgur.com/SID8Y7k.jpg",
+      "answers": ["1", "3", "5", "14"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Hai người đánh máy có thể đánh được 2 trang trong vòng 5 phút. Hỏi để đánh được 20 trang trong vòng 10 phút thì phải có bao nhiêu người?",
+      "image": "",
+      "answers": ["10 người", "3 người", "5 người", "14 người"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Tìm hình thích hợp điền vào chỗ còn thiếu",
+      "image": "https://i.imgur.com/UHvGouj.jpg",
+      "answers": ["A", "B", "C", "D", "E"],
+      "correctAnswer": 4
+    },
+    {
+      "question": "Chọn hình phù hợp ở bên phải để điền vào chỗ còn thiếu trong hình bên trái",
+      "image": "https://i.imgur.com/jyo7mvq.jpg",
+      "answers": ["A", "B", "C", "D", "E", "F"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Số nào sẽ là số tiếp theo của chuỗi số sau: 4, 7, 12, 15, 20, ?",
+      "image": "",
+      "answers": ["30", "23", "10", "11"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Có bao nhiêu hình vuông có trong hình bên dưới?",
+      "image": "https://i.imgur.com/8ZLN4CR.jpg",
+      "answers": ["30", "40", "10", "51"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Chọn hình phù hợp ở bên dưới để điền vào chỗ còn thiếu trong hình bên trên:",
+      "image": "https://i.imgur.com/U4znVna.jpg",
+      "answers": ["A", "B", "C", "D", "E", "F", "G", "H"],
+      "correctAnswer": 52
+    },
+    {
+      "question": "Hình nào khác tính chất với các hình còn lại?",
+      "image": "https://i.imgur.com/TLO54D8.jpg",
+      "answers": ["A", "B", "C", "D", "E"],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Điền số còn thiếu vào hình bên dưới:",
+      "image": "https://i.imgur.com/yODfIkH.jpg",
+      "answers": ["15", "18", "16", "14", "10"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Hình nào khác với các hình còn lại?",
+      "image": "https://i.imgur.com/j6G2BiT.jpg",
+      "answers": ["A", "B", "C", "D", "E"],
+      "correctAnswer": 4
+    },
+    {
+      "question": "Hãy điền số còn thiếu trong hình dưới đây",
+      "image": "https://i.imgur.com/6ifWlGp.jpg",
+      "answers": ["1", "2", "11", "21", "22"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Một tờ báo giảm giá 20%. Hỏi nó phải tăng bao nhiêu % để có lại giá như cũ?",
+      "image": "",
+      "answers": ["30%", "25%", "1%", "10%"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Chọn hình thích hợp điền vào chỗ còn thiếu",
+      "image": "https://i.imgur.com/MF9cYXw.jpg",
+      "answers": ["A", "B", "C", "D"],
+      "correctAnswer": 3
+    }
   ]
 }

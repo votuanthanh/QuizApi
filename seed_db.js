@@ -4,6 +4,8 @@ const fs = require('fs');
 const User = require('./models/User');
 const Quiz = require('./models/Quiz');
 const Question = require('./models/Question');
+const History = require('./models/History');
+const Exam = require('./models/Exam');
 const env = process.env.NODE_ENV || 'development';
 const settings = require('./config/settings')[env];
 require('./config/database')(settings);
@@ -62,6 +64,8 @@ async function seedUser(userPath, date) {
     await User.deleteMany({});
     await Quiz.deleteMany({});
     await Question.deleteMany({});
+    await Exam.deleteMany({});
+    await History.deleteMany({});
 
     User.seedAdminUser();
     seedUser(LIST_USER_PATH_1, 'July 03, 2020');

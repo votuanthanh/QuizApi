@@ -4,35 +4,400 @@
   "description": "Test your coding knowledge!",
   "questions": [
   {
-    "question": "What is the specific heat of water?",
+    "question": "Ai đang làm các chuẩn cho Web?",
     "image": "",
-    "answers": ["4.18 J/g&deg;C", "5.18 J/g&deg;C", "40.56 J/g&deg;C", "20.56 J/g&deg;C", "-2.56 J/g&deg;C"],
+    "answers": ["Tổ chức World Wide Web Consortium(W3C)", "Mozilla", "Google", "Microsoft"],
     "correctAnswer": 0
   },
   {
-    "question": "What is the molar mass of iron?",
-    "answers": ["0.56 grams", "5.6 grams", " 56 grams", "560 grams"],
-    "correctAnswer": 2
+    "question": "Thẻ <input type=”Submit” …> dùng để làm gì?",
+    "answers": [
+      "Tạo một nút lệnh dùng để gửi tin trong form đi",
+      "Tất cả các ý kiến trên",
+      "Tạo một ô text để nhập dữ liệu",
+      "Tạo một nút lệnh dùng để xoá thông tin trong form"
+    ],
+    "correctAnswer": 0
   },
   {
-    "question": "What does the symbol Au stand for?",
-    "answers": ["aluminum", "silver", "gold", "arsenic", "actinium"],
-    "correctAnswer": 2
-  },
-  {
-    "question": "How can we solve for change in internal energy?",
-    "answers": ["mC&#916;T", "P&#916;V", "q/T", "q + w"],
+    "question": "Thẻ HTML nào tạo ra một ô nhập dữ liệu?",
+    "answers": [
+      "<input type=\"textfield\">",
+      "<textinput type=\"text\">",
+      "<textfield>",
+      "<input type=\"text\">"
+    ],
     "correctAnswer": 3
   },
   {
-    "question": "What is one type of calorimetry?",
-    "answers": ["clock calorimetry", "coffee cup calorimetry", "styrofoam calorimetry"],
+    "question": "Đâu là mã HTML thực hiện căn lề trái cho nội dung 1 ô trong bảng",
+    "answers": [
+      "<td valign=\"left\">",
+      "<tdleft>",
+      "<td leftalign>",
+      "<td align=\"left\">"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Thẻ <input type=”Password” …> dùng để làm gì?",
+    "answers": [
+      "Tạo một textbox cho phép nhập liệu nhiều dòng",
+      "Tạo một ô text để nhập dữ liệu 1 dòng",
+      "Tạo một ô nhập mật khẩu",
+      "Tất cả các ý trên"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Những phần tử HTML nào dùng để định nghĩa cấu trúc của bảng?",
+    "answers": [
+      "<table><tr><tt>",
+      "<table><tr><td>",
+      "<table><head><tfoot>",
+      "<thead><body><tr>"
+    ],
     "correctAnswer": 1
   },
   {
-    "question": "What is the ideal gas law?",
-    "answers": ["Pn=VRT", "PV=nRT", "RT=nPV", "PTV=nR", "V=nRPT", "n=PVRT"],
+    "question": "Đoạn mã HTML nào thực hiện việc thêm màu nền cho trang web?",
+    "answers": [
+      "<body style=\"background-color:yellow;\">",
+      "<body bg=\"yellow\">",
+      "<background>yellow</background>",
+      "<body style=\"color:yellow;\">"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Phần tử HTML nào định nghĩa dữ liệu sẽ hiển thị trên thanh tiêu đề của tài liệu?",
+    "answers": [
+      "<meta>",
+      "<title>",
+      "<head>",
+      "<script>"
+    ],
     "correctAnswer": 1
+  },
+  {
+    "question": "Thẻ HTML nào tạo ra một ô nhập dữ liệu với nhiều dòng?",
+    "answers": [
+      "<input type=\"textarea\">",
+      "<textarea>",
+      "<input type=\"textbox\">"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Đoạn mã HTML nào thực hiện chèn một ảnh nền vào trang web?",
+    "answers": [
+      "<body bg=\"background.gif\">",
+      "<body style=\"background-image:url(background.gif)\">",
+      "<background img=\"background.gif\">"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Chọn phần tử HTML được dùng nhấn mạnh nội dung văn bản?",
+    "answers": [
+      "<i>",
+      "<em>",
+      "<italic>",
+      "<b>"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Chuẩn HTML là cho cái gì?",
+    "answers": [
+      "Hyperlinks and Text Markup Language",
+      "Home Tool Markup Language",
+      "Hyper Text Markup Language"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Cách nào bạn có thể mở một liên kết trong một tab mới hoặc một cửa sổ mới?",
+    "answers": [
+      "<a href=\"url\" target=\"new\">",
+      "<a href=\"url\" new>",
+      "<a href=\"url\" target=\"_blank\">"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Đâu là phần tử HTML tạo ra một danh sách đầu mục bởi dấu chấm?",
+    "answers": [
+      "<ul>",
+      "<list>",
+      "<dl>",
+      "<ol>"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Trong SQL làm thế nào để chọn tất cả các bản ghi từ bảng Persons với giá trị trong cột FirstName là Peter:",
+    "answers": [
+      "Select [all] FROM Persons WHERE FirstName=’Peter’",
+      "Select * FROM Persons WHERE FirstName LIKE’Peter’",
+      "Select [all] FROM Persons WHERE FirstName LIKE’Peter’",
+      "Select * FROM Persons WHERE FirstName=’Peter’"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Trong SQL, làm thế nào để chọn tất cả các bản ghi từ bảng Persons với giá trị trong cột FirstName bắt đầu bằng giá trị a",
+    "answers": [
+      "Select * From Persons WHERE FirstName='%a%'",
+      "Select * From Persons WHERE FirstNameLIKE %",
+      "Select * From Persons WHERE FirstName=’a’",
+      "Select * From Persons WHERE FirstName='a%'"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Trong SQL, làm thế nào để chọn tất cả các bản ghi từ bảng Persons với giá trị trong cột FirsName là Perter và LastName là Jackson:",
+    "answers": [
+      "SELEC * FROM Persons WHERE FirstName LIKE ‘Peter” AND LastName LIKE ‘Jackson’",
+      "SELEC * FROM Persons WHERE FirstName=’Peter’ AND LastName=’Jackson’",
+      "SELECT FirstName=’Peter’, LastName=’Jackson’ FROM Persons"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Trong SQL, làm thế nào để chọn tất cả các bản ghi từ bảng Persons với giá trị trong cột FirstName được sắp xếp theo thứ tự bảng chữ cái nằm giữa (và bao gồm) Hansen và Pettersen:",
+    "answers": [
+      "SELECT LastName>’Hansen’ AND LastName<’Pettersen’ FROM Persons",
+      "SELECT * FROM Persons WHERE LastName BETWEEN ‘Hansen” AND ‘Pettersen’",
+      "SELECT * FROM Persons WHERE LastName>’Hansen’ AND LastName<’Pettersen’"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Cú pháp SQL nào được dùng để trả về những giá trị khác nhau:",
+    "answers": [
+      "SELECT UNIQUE",
+      "SELECT INDENTITY",
+      "SELECT DIFFERNT",
+      "SELECT DISTINCT"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Từ khóa SQL nào được sử dụng để sắp xếp danh sách kết quả:",
+    "answers": [
+      "SORT BY",
+      "ORDER",
+      "ORDER BY",
+      "SORT"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Trong SQL, làm thế nào để trả về tất cả các dữ liệu bản ghi từ bảng Persons theo thứ tự sắp xếp giảm dần trong cột FirstName:",
+    "answers": [
+      "SELECT * FROM Persons SORT BY ‘FirstName’ DESC",
+      "SELECT * FROM Persons ORDER BY FirstName DESC",
+      "SELECT * FROM Persons ORDER FirstName DESC",
+      "SELECT * FROM Persons SORT ‘FirstName’ DESC"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Trong SQL, làm thế nào để chèn thêm bản ghi mới vào bảng Persons:",
+    "answers": [
+      "INSERT INTO Persons VALUES (‘Jimmy’, ‘Jackson’)",
+      "INSERT (‘Jimmy’, ‘Jackson’) INTO Persons",
+      "INSERT VALUES (‘Jimmy’, ‘Jackson’) INTO Persons"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Trong SQL, làm thế nào để chèn Olsen vào cột LastName trong bảng Persons:",
+    "answers": [
+      "INSERT INTO Persons (LastName) VALUES (‘Olsen’)",
+      "INSERT (‘Olsen’) INTO Persons (LastName)",
+      "INSERT INTO Persons (‘Olsen’) INTO LastName"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Làm thế nào để chuyển hóa Hansen thành Nilsen trong cột LastName của bảng Persons:",
+    "answers": [
+      "UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen'",
+      "UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen'",
+      "MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen'",
+      "MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen'"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Đôi khi, cú pháp “select count(*)” sẽ trả về giá trị ít hơn so với “select count(value)”",
+    "answers": [
+      "Đúng",
+      "Sai"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Kiểu khóa nào sau đây sẽ ngăn chặn bất kỳ người dùng nào truy cập vào bảng dữ liệu:",
+    "answers": [
+      "EXPLICIT",
+      "IMPLICIT",
+      "EXCLUSIVE",
+      "SHARED",
+      "READ ONLY"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Câu lệnh SQL nào sau đây được dùng để xóa các dòng dữ liệu khỏi bảng:",
+    "answers": [
+      "DROP",
+      "REMOVE ROW",
+      "DELETE",
+      "DELETE ROW"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Cách duy nhất để liên kết 2 bảng dữ liệu với nhau là sử dụng cú pháp chuẩn ANSI:",
+    "answers": [
+      "Đúng",
+      "Sai"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Left outer join là 1 dạng của outer join. 1 dạng khác là:",
+    "answers": [
+      "Right",
+      "Full",
+      "Right outer",
+      "Full outer",
+      "Tất cả đáp án trên"
+    ],
+    "correctAnswer": 4
+  },
+  {
+    "question": "Đối tượng transaction được tạo bởi phương thức nào",
+    "answers": [
+      "NewTransaction",
+      "StartTransaction",
+      "BeginTransaction",
+      "CreateTransaction"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Điều nào sau đây không phải là ưu điểm của Server control so với HTML control",
+    "answers": [
+      "Duy trì dữ liệu trên control",
+      "Hiển thị không phụ thuộc vào trình duyệt",
+      "Có các sự kiện riêng biệt",
+      "Tốc độ hiển thị nhanh"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Ngôn ngữ nào dưới đây có thể được dùng để viết các kịch bản phía Server trong ASP.NET?",
+    "answers": [
+      "C#",
+      "Visual Basic",
+      "C++",
+      "Cả A và B đều đúng"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Khi một trang .aspx được yêu cầu, kết quả xuất ra trên trình duyệt có dạng sau:",
+    "answers": [
+      "HTML",
+      "XML",
+      "WML",
+      "Cả 3 câu a,b,c đều đúng"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Khi biên dịch một ứng dụng ASP.Net, kết quả tạo ra có dạng nào?",
+    "answers": [
+      "EXE",
+      "DLL",
+      "COM",
+      "Tất cả đều đúng"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Sự kiện nào dưới đây phát sinh đầu tiên trong vòng đời một trang aspx",
+    "answers": [
+      "Page_Init()",
+      "Page_Load()",
+      "Page_click()",
+      "Page_Begin()"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Để chạy trang ASP .NET bạn cần có tối thiểu?",
+    "answers": [
+      "Windows explorer",
+      "Một trình duyệt Web",
+      "Common Language Runtime",
+      "Cả A và B đều đúng"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Thuộc tính Query String của đối tượng Request dùng để.",
+    "answers": [
+      "Truyền thông tin từ ứng dụng này đến ứng dụng khác trên internet.",
+      "Truyền thông tin từ web form này đến web form khác trong một ứng dụng",
+      "Lưu thông tin bí mật của người dùng, như password chẳng hạn.",
+      "Lưu thông tin để các ứng dụng của tất cả mọi người truy cập tới nó sử dụng"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Hãy xác định các phương thức hay tập hợp của đối tượng Response là:",
+    "answers": [
+      "Write",
+      "Redirect",
+      "QueryString",
+      "Cả A và B"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Tìm chọn đáp án đúng.",
+    "answers": [
+      "Đối tượng Response được sử dụng để giao tiếp với Client, nó quản lý và điều phối thông tin từ Web Server đến các trình duyệt của người dùng.",
+      "Đối tượng Application được sử dụng để quản lý tất cả các thông tin của một ứng dụng web. Thông tin được lưu trữ trong đối tượng Application có thể được xử lý trong bất kỳ trang aspx nào trong suốt chu kỳ sống của ứng dụng.",
+      "Đối tượng Request được dùng để nhận thông tin từ trình duyệt của người dùng gởi về cho WebServer.",
+      "Tất cả đều đúng"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Đối tượng nào được sử dụng để cung cấp thông tin của Server cho ứng dụng.",
+    "answers": [
+      "Request",
+      "Application",
+      "Server",
+      "Response"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Chọn đáp án sai.",
+    "answers": [
+      "Aplication dùng để lưu dữ liệu cho một phiên làm việc",
+      "Aplication dùng để lưu dữ liệu cho một trang hiện tại",
+      "Aplication dùng để dùng để lưu dữ liệu là các ứng dụng",
+      "Tất cả đều đúng"
+    ],
+    "correctAnswer": 3
   }
   ]
 }
