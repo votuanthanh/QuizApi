@@ -4,105 +4,260 @@
   "description": "Test your english knowledge!",
   "questions": [
   {
-    "question": "What is the specific heat of water?",
+    "question": "Try and be a little more cheerful because if you don't bear ....... soon, you'll make everyone else miserable.",
     "image": "",
-    "answers": ["4.18 J/g&deg;C", "5.18 J/g&deg;C", "40.56 J/g&deg;C", "20.56 J/g&deg;C", "-2.56 J/g&deg;C"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What is the molar mass of iron?",
-    "answers": ["0.56 grams", "5.6 grams", " 56 grams", "560 grams"],
+    "answers": ["through", "along", "up", "to"],
     "correctAnswer": 2
   },
   {
-    "question": "What does the symbol Au stand for?",
-    "answers": ["aluminum", "silver", "gold", "arsenic", "actinium"],
-    "correctAnswer": 2
-  },
-  {
-    "question": "How can we solve for change in internal energy?",
-    "answers": ["mC&#916;T", "P&#916;V", "q/T", "q + w"],
+    "question": "The only reason for them going to the cinema on that day was to find some form of ........",
+    "answers": ["internment", "involvement", "engrossment", "entertainment"],
     "correctAnswer": 3
   },
   {
-    "question": "What is one type of calorimetry?",
-    "answers": ["clock calorimetry", "coffee cup calorimetry", "styrofoam calorimetry"],
+    "question": "In order to make a sensible ....... among the different vacuum cleaners available, it is important to do some research.",
+    "answers": ["comparing", "comparison", "compares", "comparative"],
     "correctAnswer": 1
   },
   {
-    "question": "What is the ideal gas law?",
-    "answers": ["Pn=VRT", "PV=nRT", "RT=nPV", "PTV=nR", "V=nRPT", "n=PVRT"],
-    "correctAnswer": 1
-  },
-  {
-    "question": "Is enthalpy a state function?",
-    "answers": ["Yes", "No"],
+    "question": "The local department store has to make a sustained effort at this time of the year to ....... customer demand for summer clothing.",
+    "answers": ["satisfy", "satisfaction", "satisfies", "satisfying"],
     "correctAnswer": 0
   },
   {
-    "question": "What is one type of calorimetry?",
-    "answers": ["bomb calorimetry", "plastic calorimetry", "wood calorimetry", "air calorimetry"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What is the molar mass of hydrogen?",
-    "answers": ["0.01 grams", "0.1 grams", "1 gram", "10 grams", "100 grams", "1000 grams"],
+    "question": "The contract was signed by the three partners who thus agreed to ....... by terms and conditions contained in it.",
+    "answers": ["follow", "adhere", "abide", "stick"],
     "correctAnswer": 2
   },
   {
-    "question": "What is the first law of thermodynamics?",
-    "answers": ["Conservation of mass", "Conservation of volume", "Conservation of energy"],
+    "question": "There was nothing in the contract that ....... who would be responsible in the event that one of the partners became seriously ill.",
+    "answers": ["pointed", "specified", "printed", "developed"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "I would be very interested in ....... for that job.",
+    "answers": ["entering", "working", "applying", "writing"],
     "correctAnswer": 2
   },
   {
-    "question": "Is work a state function?",
-    "answers": ["Yes", "No"],
-    "correctAnswer": 1
-  },
-  {
-    "question": "What is the volume of a rectangular prism?",
-    "answers": ["length x width x height", "length x width", "length x height", "length x width x height x circumference"],
+    "question": " Do you want to ....... as a candidate in the local elections?",
+    "answers": ["stand", "sit", "go", "try"],
     "correctAnswer": 0
   },
   {
-    "question": "What is the molar mass of tin?",
-    "answers": ["0.119 grams", "1.19 grams", "11.9 grams", "119 grams", "1190 grams"],
+    "question": "After all these years she has decided to take early ........",
+    "answers": ["leave", "finishing", "departure", "retirement"],
     "correctAnswer": 3
   },
   {
-    "question": "How do we solve for Gibbs' free energy?",
-    "answers": ["H - PV", "PV + TS", "q + PV", "TP + q", "q + TS", "H - TS"],
-    "correctAnswer": 5
-  },
-  {
-    "question": "Is free energy a state function?",
-    "answers": ["yes", "no"],
-    "correctAnswer": 0
-  },
-  {
-    "question": "What is the molar mass of one gram of titanium?",
-    "answers": ["4.8 grams", "48 grams", "480 grams", "4800 grams"],
+    "question": "Going on a spending ....... with your credit card and no concern about how you pay back the money you borrow, is a growing habit these days.",
+    "answers": ["burst", "spree", "flight", "da"],
     "correctAnswer": 1
   },
   {
-    "question": "What does the symbol Sb stand for?",
-    "answers": ["Antimony", "Selenium", "Sabenium", "Beryllium", "Tantaium"],
+    "question": "There is a popular demand for the system that allows credit companies to offer unlimited credit to young people to be ........",
+    "answers": ["overhauled", "overseen", "overlooked", "overtaken"],
     "correctAnswer": 0
   },
   {
-    "question": "How do we solve for entropy?",
-    "answers": ["n/q", "V/P", "P/T", "q/T"],
+    "question": "There are frequently ....... in the family home between parents and children about whether you should enter into credit agreements",
+    "answers": ["collisions", "clashes", "claims", "crashes"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What concerns people most are the mounting ....... among governments that it will take at least a generation for us to be rid of excessive debt",
+    "answers": ["frights", "fearful", "fears", "afraid"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Without the right software I'm afraid you can't ....... that particular program.",
+    "answers": ["reach", "access", "obtain", "find"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "The aim of the office manager is to ....... enough room on the building plans so that each employee can have space for a personal computer.",
+    "answers": ["arrange", "accord", "allocate", "organize"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "When you see that particular symbol on the screen, you have to take that as a ....... that something is wrong.",
+    "answers": ["indicating", "checking", "briefing", "warning"],
     "correctAnswer": 3
   },
   {
-    "question": "Is entropy a state function?",
-    "answers": ["Yes", "No"],
+    "question": "With this program you can always check your spelling and grammar and if you don't want to accept what it shows, you simply press ......",
+    "answers": ["'ignore'", "'quit'", "'leave'", "'forget'"],
     "correctAnswer": 0
   },
   {
-    "question": "How many protons does argon have?",
-    "answers": ["9", "18", "27", "36", "45", "54", "63"],
+    "question": "Concern was expressed by the office manager that the company would buy an ....... financial package",
+    "answers": ["agreeable", "affordable", "absolute", "actual"],
     "correctAnswer": 1
+  },
+  {
+    "question": "The main ....... of stationery for the office suddenly announced there would be an overall increase in their prices",
+    "answers": ["provision", "producer", "provisional", "provider"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Once again the company has had to make a ....... in the number of office staff to try and recoup their losses.",
+    "answers": ["reducing", "reduction", "reduce", "reduces"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Staff are always encouraged to work by themselves and whenever they meet a problem, they should use their own ........",
+    "answers": ["initiative", "interest", "involvement", "initial"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "On her retirement she was given a substantial cheque in ....... of all the work she had done over the last 20 years.",
+    "answers": ["respect", "thought", "appreciation", "belief"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Having attended the office procedures course all employees were expected to ....... what they had learned and introduce it into their daily routine",
+    "answers": ["reinforce", "respond", "react", "resource"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Visiting clients had commented on the casual dress ....... of most of the clerical staff.",
+    "answers": ["manner", "method", "feature", "code"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "The ....... of staff doing physical exercises before the start of the day is well established in Japanese companies.",
+    "answers": ["practical", "practicality", "practice", "practically"],
+    "correctAnswer": 2
+  },
+  {
+    "question": " There is a lengthy procedure used in this office for staff who have produced shoddy work and it begins with a ....... warning",
+    "answers": ["wordy", "verbal", "worded", "verbos"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "There was no fixed agenda for that particular day as it was to be regarded simply as a ....... meeting",
+    "answers": ["possible", "probable", "unplanned", "casual"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "At the interview all the candidates were shown round the building but could only really catch a ....... of the sort of work being carried out.",
+    "answers": ["look", "view", "glimpse", "pictur"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "They really need to keep a check on the stationery supplies as they've run ....... A4 paper once again.    ",
+    "answers": ["in to", "up for", "out of", "up to"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Managers prefer to select people who have been ....... to many different types of office environments.    ",
+    "answers": ["devoted", "exposed", "opened", "experienced"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "A troubleshooter was brought into the office from another firm to get rid of some very ....... procedures.",
+    "answers": ["outdated", "completed", "finished", "ended"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "We got there early so that we could get the best ....... in the sale before anyone else.",
+    "answers": ["objects", "products", "bargains", "offerings"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "If you ....... with me, I'll go and see whether we have that in your size.",
+    "answers": ["hold", "stay", "bear", "wait"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "The trouble with these huge superstores is that they don't have enough ....... to deal with customers at busy times",
+    "answers": ["barriers", "sales points", "exits", "checkouts"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "It started off as a small street corner shop over 30 years ago but it has now ....... into a massive department store",
+    "answers": ["expanded", "extended", "explored", "enlarged"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "Take a good look at the receipt when you leave so that you can see that all the ....... have been listed.    ",
+    "answers": ["proceeds", "items", "products", "produce"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Whenever I go to the old part of a city, I like to ....... all the shops selling antiques.    ",
+    "answers": ["examine", "search", "check", "explore"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "Are you aware of the latest ....... in children's clothing?",
+    "answers": ["tendency", "trend", "custom", "habit"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "They're quite ....... in their policy of not giving refunds without a receipt in this store",
+    "answers": ["severe", "strong", "strict", "hard"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "They have a ....... restriction in the shop with regard to the number of items of clothing that you can try on at one time.",
+    "answers": ["legal", "reasonable", "required", "mandatory"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "The extent of the ....... available in this one store is more than you can possibly imagine.    ",
+    "answers": ["merchandise", "objects", "produce", "articles"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "I was pleased to receive your response to my proposal but there are one or two points that need ......",
+    "answers": ["notification", "certification", "clarification", "signification"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "A report has just been ....... that gives details of the causes of this trend towards informality in the business sector.",
+    "answers": ["published", "directed", "opened", "held"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "According to the ....... in the report it is clear that employees under the age of 35 prefer to dress casually at work",
+    "answers": ["seeking", "searching", "findings", "probing"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Thirty years ago this kind of informality would not have been ........",
+    "answers": ["withheld", "endured", "suffered", "tolerated"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "All employees are kindly requested to ....... from smoking in the presence of customers.",
+    "answers": ["stop", "restrain", "refrain", "restrict"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "The meeting went on for three hours and as a result there was no time left to discuss all the topics on the ........",
+    "answers": ["list", "index", "contents", "agenda"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "There's really no point in hoping to add important topics right at the end of the meeting under the heading of any other ........",
+    "answers": ["business", "work", "activity", "tasks"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "The chairman was obliged to bring the meeting to a ....... because a fire broke out in the adjoining room.",
+    "answers": ["cessation", "standstill", "stopping", "halt"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "It is absolutely essential that the clerk takes care to ....... any decisions that have been reached during the meeting.",
+    "answers": ["time", "minute", "detail", "measure"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "As so few members had turned up at the meeting, it was decided to ....... it until further notice.",
+    "answers": ["delay", "wait", "postpone", "hold"],
+    "correctAnswer": 2
   }
   ]
 }

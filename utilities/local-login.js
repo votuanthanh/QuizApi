@@ -11,7 +11,7 @@ module.exports = new PassportLocalStrategy({
 }, (req, inputEmail, password, done) => {
   User.findOne({ email: inputEmail }).then((user) => {
     if (!user || !user.authenticate(password)) {
-      return done('Incorect email or password');
+      return done('Incorect email');
     }
 
     console.log(user.active);
