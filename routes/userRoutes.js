@@ -10,22 +10,22 @@ function validateRegisterData(data) {
   const errors = {};
   let isValid = true;
   let message = '';
-  if (!data || typeof data.password !== 'string' ||
-      data.password.trim().length < 4) {
+  // if (!data || typeof data.password !== 'string' ||
+  //     data.password.trim().length < 4) {
+  //   isValid = false;
+  //   errors.password = 'Password must have at least 4 characters.';
+  // }
+
+  if (!data || typeof data.fullName !== 'string' ||
+      data.fullName.trim().length === 0) {
     isValid = false;
-    errors.password = 'Password must have at least 4 characters.';
+    errors.name = 'Please provide your full name.';
   }
 
-  if (!data || typeof data.firstName !== 'string' ||
-      data.firstName.trim().length === 0) {
+  if (!data || typeof data.email !== 'string' ||
+      data.email.trim().length === 0) {
     isValid = false;
-    errors.name = 'Please provide your name.';
-  }
-
-  if (!data || typeof data.lastName !== 'string' ||
-      data.lastName.trim().length === 0) {
-    isValid = false;
-    errors.name = 'Please provide your name.';
+    errors.name = 'Please provide your email.';
   }
 
   if (!isValid) {
@@ -102,6 +102,7 @@ router.post('/login', (req, res, next) => {
 });
 
 router.post('/register', (req, res, next) => {
+  const userData = { ...req.body};
   const validationResult = validateRegisterData(req.body);
   if (!validationResult.success) {
     return res.status(200).json({
@@ -111,21 +112,41 @@ router.post('/register', (req, res, next) => {
     });
   }
 
-  return passport.authenticate('local-signup', (err) => {
-    if (err) {
-      console.log(err),
-      res.status(200).json({
-        success: false,
-        message: err,
-      });
-    }
+  const userToAdd = {
+    fullName: userData.fullName,
+    email: userData.email,
+  };
 
-    return res.status(200).json({
+  User.create(userToAdd).then((user) => {
+    res.status(200).json({
       success: true,
-      message: 'You have successfully signed up!' +
-        'Now you should be able to log in.',
+      message: `User ${user.email} added!`,
+      user,
     });
-  })(req, res, next);
+  }).catch((err) => {
+    console.log('Error: ' + err);
+    return res.status(500).json({
+      success: false,
+      message: 'Cannot create the user in database',
+      errors: err,
+    });
+  });
+
+  // return passport.authenticate('local-signup', (err) => {
+  //   if (err) {
+  //     console.log(err),
+  //     res.status(200).json({
+  //       success: false,
+  //       message: err,
+  //     });
+  //   }
+
+  //   return res.status(200).json({
+  //     success: true,
+  //     message: 'You have successfully signed up!' +
+  //       'Now you should be able to log in.',
+  //   });
+  // })(req, res, next);
 });
 
 router.get('/getUserById/:id', (req, res) => {
