@@ -1,20 +1,17 @@
 /* eslint-disable max-len */
 const express = require('express');
 const passport = require('passport');
+const moment = require('moment');
 const User = require('../models/User');
 const SolvedExam = require('../models/SolvedExam');
-
 const router = new express.Router();
+
+const DATE_FORMAT = "DD/MM/YYYY hh:mm A"
 
 function validateRegisterData(data) {
   const errors = {};
   let isValid = true;
   let message = '';
-  // if (!data || typeof data.password !== 'string' ||
-  //     data.password.trim().length < 4) {
-  //   isValid = false;
-  //   errors.password = 'Password must have at least 4 characters.';
-  // }
 
   if (!data || typeof data.fullName !== 'string' ||
       data.fullName.trim().length === 0) {
@@ -26,6 +23,11 @@ function validateRegisterData(data) {
       data.email.trim().length === 0) {
     isValid = false;
     errors.name = 'Please provide your email.';
+  }
+
+  if (!data || moment(data.schedule, DATE_FORMAT).format(DATE_FORMAT) !== data.schedule) {
+    isValid = false;
+    errors.name = 'Schedule format was DD/MM/YYYY hh:mm A. Ex 20/12/2020 02:00 PM';
   }
 
   if (!isValid) {
@@ -115,6 +117,8 @@ router.post('/register', (req, res, next) => {
   const userToAdd = {
     fullName: userData.fullName,
     email: userData.email,
+    schedule: moment(userData.schedule , DATE_FORMAT).toDate(),
+    active: true,
   };
 
   User.create(userToAdd).then((user) => {
