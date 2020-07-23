@@ -116,7 +116,7 @@ router.post('/register', (req, res, next) => {
 
   const userToAdd = {
     fullName: userData.fullName,
-    email: userData.email,
+    email: userData.email.toLowerCase().trim(),
     schedule: moment(userData.schedule , DATE_FORMAT).toDate(),
     active: true,
   };
