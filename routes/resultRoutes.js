@@ -31,7 +31,7 @@ router.get('/result', (req, res) => {
               role: result.role,
               duration: formatMinutes(duration),
               completionDate: result.dateCreated ? moment(result.dateCreated).format('DD/MM/YYYY HH:mm') : '',
-              registeredDate: user.schedule ? user.schedule.format('DD/MM/YYYY HH:mm') : '',
+              registeredDate: user.schedule ? moment(user.schedule).format('DD/MM/YYYY HH:mm') : '',
               user,
               totalCorrect,
               lastResult: totalCorrect + '/' + totalQuestion,
