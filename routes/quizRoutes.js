@@ -12,6 +12,7 @@ const shuffle = require('../utilities/shuffle');
 
 const AI_ROLE = 'AI';
 const DEVELOPER_ROLE = 'DEVELOPER';
+const ADMIN_ROLE = 'Admin'
 const NUMBER_OF_QUESTIONS = 5;
 const LOGIC_QUIZ = 1;
 const CODING_QUIZ = 2;
@@ -487,7 +488,7 @@ router.post('/completeAllExams', authCheck, (req, res) => {
       { duration: data.duration }
   )
       .then(function(result) {
-        User.findByIdAndUpdate(user._id, { active: false }).then(() => {
+        User.findByIdAndUpdate(user._id, { active: user.role == ADMIN_ROLE ? true : false }).then(() => {
           res.status(200).json({
             success: true,
             message: 'Complete all quizzies!',
