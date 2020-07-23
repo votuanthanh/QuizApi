@@ -28,7 +28,7 @@ router.get('/result', (req, res) => {
               exam,
               role: result.role,
               duration: formatMinutes(duration),
-              date: result.dateCreated,
+              completionDate: result.dateCreated,
               user: result.creatorId,
               totalCorrect,
               lastResult: totalCorrect + '/' + totalQuestion,

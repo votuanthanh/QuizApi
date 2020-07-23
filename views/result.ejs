@@ -16,6 +16,8 @@
         <th>Full Name</th>
         <th>Email</th>
         <th>Role</th>
+        <th>Registerd Date</th>
+        <th>Completion Date</th>
         <th>Logic</th>
         <th>Coding</th>
         <th>English</th>
@@ -29,6 +31,8 @@
           <td data-column="Full Name"><%- result.user.fullName %></td>
           <td data-column="Email"><%- result.user.email %></td>
           <td data-column="Role"><%- result.role %></td>
+          <td data-column="Registerd Date"><%- result.schedule ? result.schedule.toLocaleString() : '' %></td>
+          <td data-column="Completion Date"><%- result.completionDate ? result.completionDate.toLocaleString() : '' %></td>
           <td data-column="Logic"><%- result.exam['1'] %></td>
           <td data-column="Coding"><%- result.exam['2'] %></td>
           <td data-column="English"><%- result.exam['3'] %></td>
