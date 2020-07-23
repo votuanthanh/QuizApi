@@ -1,4 +1,5 @@
 const express = require('express');
+const moment = require('moment');
 const History = require('../models/History');
 const User = require('../models/User');
 const formatMinutes = require('../utilities/formatMinutes')
@@ -24,12 +25,14 @@ router.get('/result', (req, res) => {
             totalQuestion += ex.totalQuestions;
           });
           if (totalCorrect != 0 && totalQuestion != 0) {
+            const user =  result.creatorId;
             history.push({
               exam,
               role: result.role,
               duration: formatMinutes(duration),
-              completionDate: result.dateCreated,
-              user: result.creatorId,
+              completionDate: result.dateCreated ? moment(result.dateCreated).format('DD/MM/YYYY HH:mm') : '',
+              registeredDate: user.schedule ? user.schedule.format('DD/MM/YYYY HH:mm') : '',
+              user,
               totalCorrect,
               lastResult: totalCorrect + '/' + totalQuestion,
             });
