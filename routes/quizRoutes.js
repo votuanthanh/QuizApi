@@ -12,6 +12,7 @@ const shuffle = require('../utilities/shuffle');
 
 const AI_ROLE = 'AI';
 const DEVELOPER_ROLE = 'DEVELOPER';
+const NUMBER_OF_QUESTIONS = 5;
 const LOGIC_QUIZ = 1;
 const CODING_QUIZ = 2;
 const ENGLISH_QUIZ = 3;
@@ -187,7 +188,7 @@ router.post('/createExam', authCheck, (req, res) => {
           const examArray = [];
 
           if (logicQuiz) {
-            const logicQuestions = shuffle(logicQuiz.question).slice(0, role == AI_ROLE ? 20 : 10);
+            const logicQuestions = shuffle(logicQuiz.question).slice(0, role == AI_ROLE ? NUMBER_OF_QUESTIONS * 2 : NUMBER_OF_QUESTIONS);
             result[logicQuiz._id] = { questions: logicQuestions };
             examArray.push({
               quizId: logicQuiz._id,
@@ -197,7 +198,7 @@ router.post('/createExam', authCheck, (req, res) => {
           }
 
           if (codingQuiz) {
-            const codingQuestions = shuffle(codingQuiz.question).slice(0, 10);
+            const codingQuestions = shuffle(codingQuiz.question).slice(0, NUMBER_OF_QUESTIONS);
             result[codingQuiz._id] = { questions: codingQuestions };
             examArray.push({
               quizId: codingQuiz._id,
@@ -207,7 +208,7 @@ router.post('/createExam', authCheck, (req, res) => {
           }
 
           if (englishQuiz) {
-            const englishQuestions = shuffle(englishQuiz.question).slice(0, 10);
+            const englishQuestions = shuffle(englishQuiz.question).slice(0, NUMBER_OF_QUESTIONS);
             result[englishQuiz._id] = { questions: englishQuestions };
             examArray.push({
               quizId: englishQuiz._id,
@@ -255,37 +256,6 @@ router.get('/getQuestions/:id', (req, res) => {
       success: true,
       message: `Questions loaded!`,
       questions,
-    });
-  }).catch((err) => {
-    console.log(err);
-    res.status(500).json({
-      success: false,
-      message: 'Cannot find quiz with id ' + id,
-      errors: err,
-    });
-  });
-});
-
-router.get('/getQuizById/:id', (req, res) => {
-  const id = req.params.id;
-  Quiz.findById(id).then((quiz) => {
-    User.findById(quiz.creatorId).then((user) => {
-      Question.find({ quizId: id }).then((allQuestions) => {
-        const creator = user.username;
-        res.status(200).json({
-          success: true,
-          message: `Questions loaded!`,
-          allQuestions,
-          quiz,
-          creator,
-        });
-      });
-    }).catch((err) => {
-      res.status(500).json({
-        success: false,
-        message: 'Cannot find user with id ' + quiz.create,
-        errors: err,
-      });
     });
   }).catch((err) => {
     console.log(err);
